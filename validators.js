@@ -13,6 +13,8 @@ function sendMessage() {
 setTimeout(sendMessage, 200);
 window.addEventListener("message", function (event) {
   if (event.data.message) {
-    resultDiv.innerHTML = `<h3>${JSON.stringify(event.data.message)}</h3>`;
+    resultDiv.innerHTML = `<h3>Result: ${JSON.stringify(
+      event.data.message
+    )}</h3>`;
   }
 });
