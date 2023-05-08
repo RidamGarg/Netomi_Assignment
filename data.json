@@ -1,0 +1,28 @@
+{
+  "validators": [
+    {
+      "field": "name",
+      "validator": [{ "required": true }]
+    },
+    {
+      "field": "dob",
+      "validator": [{ "required": false }]
+    },
+    {
+      "field": "contact",
+      "validator": [{ "required": false }]
+    },
+    {
+      "field": "country",
+      "validator": [{ "required": true }]
+    },
+    {
+      "field": "state",
+      "validator": [{ "required": true }]
+    },
+    {
+      "field": "email",
+      "validator": [{ "required": false }]
+    }
+  ]
+}
