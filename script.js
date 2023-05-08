@@ -33,14 +33,17 @@ function getAllCountries() {
 
 selectCountry.addEventListener("change", () => {
   const code = selectCountry.value;
-  const states = allCountries.filter((el) => el.code3 === code)[0].states;
+  console.log(code);
+  const states = allCountries.filter((el) => el.code3 === code)[0]?.states;
   selectState.innerHTML = `<option value="">Select State</option>`;
-  states.forEach((element) => {
-    const option = document.createElement("option");
-    option.textContent = element.name;
-    option.value = element.code3;
-    selectState.appendChild(option);
-  });
+  if (states) {
+    states.forEach((element) => {
+      const option = document.createElement("option");
+      option.textContent = element.name;
+      option.value = element.code3;
+      selectState.appendChild(option);
+    });
+  }
 });
 
 function checkValidators(validators) {
