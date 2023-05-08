@@ -5,6 +5,9 @@ function sendMessage() {
     .then((data) => {
       const iframe = document.querySelector("iframe");
       iframe.contentWindow.postMessage(data, "*");
+    })
+    .catch((err) => {
+      console.log(err);
     });
 }
 setTimeout(sendMessage, 200);

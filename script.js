@@ -47,7 +47,6 @@ selectCountry.addEventListener("change", () => {
 });
 
 function checkValidators(validators) {
-  console.log(validators, "Validators");
   let res = null;
 
   validators.forEach((validatorField) => {
