@@ -43,7 +43,7 @@ selectCountry.addEventListener("change", () => {
   });
 });
 
-function attachValidators(validators) {
+function checkValidators(validators) {
   console.log(validators, "Validators");
   let res = null;
 
@@ -67,7 +67,7 @@ function attachValidators(validators) {
 button.addEventListener("click", (e) => {
   e.preventDefault();
   const result = { message: {} };
-  const response = attachValidators(validators);
+  const response = checkValidators(validators);
 
   if (response) {
     result.message = response;
