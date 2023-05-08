@@ -63,6 +63,15 @@ function checkValidators(validators) {
       }
     }
   });
+  ["name", "country", "state"].forEach((el) => {
+    if (document.getElementById(el).value.length === 0 && !res) {
+      res = {
+        [el]: {
+          error: `${el} is a required field`,
+        },
+      };
+    }
+  });
   return res;
 }
 
